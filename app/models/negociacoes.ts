@@ -7,12 +7,12 @@ export class Negociacoes{
         this.negociacoes.push(negociacao);
     }
 
-    lista(): Array<Negociacao>{
+    lista(): readonly Negociacao [] {
         return this.negociacoes;
     }
 
-}
+    //lista(): Array<Negociacao>{
+    //    return [...this.negociacoes]; // spread operator - retorna uma nova lista mantendo a lista original
+    //}
 
-//const negociacoes = new Negociacoes();
-//negociacoes.lista().forEach(n => {
-//});
+}
