@@ -3,7 +3,9 @@
         "outDir": "dist/js",
         "target": "ES6",
         "noEmitOnError": true, // não gera os arquivos enquanto o compilador estiver ok
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "removeComments": true, // remove comentarios dentro do JS
+        "strictNullChecks": true // habilita null para todos os tipos
     },
     "include": [
         "app/**/*"
