@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
-        "outDir": "dist/js",
+        "outDir": "app/dist/js",
         "target": "ES6",
         "noEmitOnError": true, // não gera os arquivos enquanto o compilador estiver ok
         "noImplicitAny": true,
         "removeComments": true, // remove comentarios dentro do JS
-        "strictNullChecks": true // habilita null para todos os tipos
+        "strictNullChecks": true, // habilita null para todos os tipos
+        "experimentalDecorators": true
     },
     "include": [
-        "app/**/*"
+        "app/src/**/*"
     ]
 
 }
