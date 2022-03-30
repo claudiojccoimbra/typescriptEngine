@@ -3,13 +3,17 @@ import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao.js";
 
 export abstract class View<T> {
     protected elemento: HTMLElement;
+    private escapar = false;
 
-    constructor(seletor : string) {
+    constructor(seletor : string, escapar?: boolean) {
         const elemento = document.querySelector(seletor);
         if(elemento){
             this.elemento = elemento as HTMLElement;
         }else{
             throw Error('Seletor não existe no DOM')
+        }
+        if(escapar){
+            this.escapar = escapar;
         }
     }
 
